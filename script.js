@@ -1,3 +1,4 @@
+let currentPlayer = '1';
 const currentBoard = [];
 
 (function setBoard(){
@@ -11,12 +12,21 @@ const currentBoard = [];
         block.check = 'false';
         board.appendChild(block);
         currentBoard.push(block)
-        console.log(currentBoard[i]);
     }
 })();
 
 function changeColor()
 {
     this.classList.add('red')
-    console.log(this);
+    changePlayer();
+    console.log(currentPlayer)
+}
+
+function changePlayer()
+{
+    if (currentPlayer === '1')
+    {
+        currentPlayer = '2'
+    }
+    else{ currentPlayer = '1'}
 }
