@@ -19,23 +19,27 @@ const currentBoard = [];
 
 function changeBlock()
 {
-    if (currentPlayer === '1')
+    if (!this.classList.contains('x') && !this.classList.contains('o'))
     {
-    const xpic = document.createElement('img');
-    this.classList.add('x');
-    this.appendChild(xpic);
-    xpic.src = 'images/Ximg.png';
-    changePlayer();
-    checkGame();
+        if (currentPlayer === '1')
+        {
+            const xpic = document.createElement('img');
+            this.classList.add('x');
+            this.appendChild(xpic);
+            xpic.src = 'images/Ximg.png';
+            changePlayer();
+            checkGame();
+            }
+            else{
+            const opic = document.createElement('img');
+            this.classList.add('o')
+            this.appendChild(opic);
+            opic.src = 'images/Oimg.jpeg';
+            changePlayer();
+            checkGame();
+        }
     }
-    else{
-    const opic = document.createElement('img');
-    this.classList.add('o')
-    this.appendChild(opic);
-    opic.src = 'images/Oimg.jpeg';
-    changePlayer();
-    checkGame();
-}
+    else{console.log('already picked')}
 }
 
 function changePlayer()
