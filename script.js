@@ -6,8 +6,9 @@ const currentBoard = [];
     for (i=1; i<=9;i++)
     {
         const block = document.createElement('div');
-        block.addEventListener('click',changeColor);
+        block.addEventListener('click',changeBlock);
         block.classList.add('boardBlock');
+        block.innerHTML= '';
         block.number = `${i}`;
         block.check = 'false';
         board.appendChild(block);
@@ -15,11 +16,23 @@ const currentBoard = [];
     }
 })();
 
-function changeColor()
+function changeBlock()
 {
-    this.classList.add('red')
+    if (currentPlayer === '1')
+    {
+    let xpic = document.createElement('img');
+    this.classList.add('x');
+    this.appendChild(xpic);
+    xpic.src = 'images/Ximg.png';
     changePlayer();
-    console.log(currentPlayer)
+    }
+    else{
+    const opic = document.createElement('img');
+    this.classList.add('o')
+    this.appendChild(opic);
+    opic.src = 'images/Oimg.jpeg';
+    changePlayer();
+}
 }
 
 function changePlayer()
