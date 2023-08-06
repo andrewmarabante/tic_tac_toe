@@ -6,6 +6,7 @@ const currentBoard = [];
     {
         const block = document.createElement('div');
         block.addEventListener('click',changeColor);
+        block.classList.add('boardBlock');
         block.number = `${i}`;
         block.check = 'false';
         board.appendChild(block);
@@ -16,5 +17,6 @@ const currentBoard = [];
 
 function changeColor()
 {
-    console.log('working');
+    this.classList.add('red')
+    console.log(this);
 }

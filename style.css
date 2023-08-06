@@ -10,7 +10,11 @@
     width: 20em;
 }
 
-#gameBoard div{
+.boardBlock{
     background-color: blue;
     border: solid 1px black;
+}
+
+.red{
+    background-color: red;
 }
