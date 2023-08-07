@@ -1,5 +1,6 @@
 let currentPlayer = '1';
 let counter = 0;
+document.getElementById('reset').addEventListener('click', reset)
 const currentBoard = [];
 
 (function setBoard(){
@@ -110,4 +111,20 @@ function checkGame()
     {
         console.log('tie')
     }
+}
+
+function reset()
+{
+    for (i=0;i<9; i++)
+    {
+        if(currentBoard[i].classList.contains('x') === true)
+        {
+            currentBoard[i].classList.remove('x')
+        }
+        else if(currentBoard[i].classList.contains('o') === true)
+        {
+            currentBoard[i].classList.remove('o')
+        }
+    }
+    counter = 0;
 }
