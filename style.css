@@ -24,7 +24,9 @@
 }
 .side{
     flex: 1;
-    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .boardBlock{
@@ -64,4 +66,24 @@
 #owl{
     flex: 1;
     background-color: bisque;
+}
+.ltop{
+    height: 8em;
+    width: 8em;
+    background-image: url(./images/Ximg.png);
+    background-size: cover;
+    border-bottom: groove 3px black;
+}
+#lbot{
+    font-size: 6em;
+}
+.rtop{
+    height: 8em;
+    width: 8em;
+    background-image: url(./images/Oimg.jpeg);
+    background-size: cover;
+    border-bottom: groove 3px black;
+}
+#rbot{
+    font-size: 6em;
 }

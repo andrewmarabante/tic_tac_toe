@@ -73,11 +73,13 @@ function checkGame()
             xscore++;
             xwl.innerHTML = 'You Win'
             freeze = 'true'
+            document.getElementById('lbot').innerHTML = xscore;
         }
         else{
             oscore++;
             owl.innerHTML = 'You Win'
             freeze = 'true'
+            document.getElementById('rbot').innerHTML = oscore;
         }
     }
     else if ((b4.classList.contains('x') === true && b5.classList.contains('x') === true && b6.classList.contains('x') === true)
@@ -89,11 +91,13 @@ function checkGame()
             xscore++;
             xwl.innerHTML = 'You Win'
             freeze = 'true'
+            document.getElementById('lbot').innerHTML = xscore;
         }
         else{
             oscore++;
             owl.innerHTML = 'You Win'
             freeze = 'true'
+            document.getElementById('rbot').innerHTML = oscore;
         }
     }
     else if ((b7.classList.contains('x') === true && b8.classList.contains('x') === true && b9.classList.contains('x') === true)
@@ -105,11 +109,13 @@ function checkGame()
             xscore++;
             xwl.innerHTML = 'You Win'
             freeze = 'true'
+            document.getElementById('lbot').innerHTML = xscore;
         }
         else{
             oscore++;
             owl.innerHTML = 'You Win'
             freeze = 'true'
+            document.getElementById('rbot').innerHTML = oscore;
         }
     }
     else if ((b1.classList.contains('x') === true && b4.classList.contains('x') === true && b7.classList.contains('x') === true)
@@ -121,11 +127,13 @@ function checkGame()
             xscore++;
             xwl.innerHTML = 'You Win'
             freeze = 'true'
+            document.getElementById('lbot').innerHTML = xscore;
         }
         else{
             oscore++;
             owl.innerHTML = 'You Win'
             freeze = 'true'
+            document.getElementById('rbot').innerHTML = oscore;
         }
     }
     else if ((b2.classList.contains('x') === true && b5.classList.contains('x') === true && b8.classList.contains('x') === true)
@@ -137,11 +145,13 @@ function checkGame()
             xscore++;
             xwl.innerHTML = 'You Win'
             freeze = 'true'
+            document.getElementById('lbot').innerHTML = xscore;
         }
         else{
             oscore++;
             owl.innerHTML = 'You Win'
             freeze = 'true'
+            document.getElementById('rbot').innerHTML = oscore;
         }
     }
     else if ((b3.classList.contains('x') === true && b6.classList.contains('x') === true && b9.classList.contains('x') === true)
@@ -153,11 +163,13 @@ function checkGame()
             xscore++;
             xwl.innerHTML = 'You Win'
             freeze = 'true'
+            document.getElementById('lbot').innerHTML = xscore;
         }
         else{
             oscore++;
             owl.innerHTML = 'You Win'
             freeze = 'true'
+            document.getElementById('rbot').innerHTML = oscore;
         }
     }
     else if ((b1.classList.contains('x') === true && b5.classList.contains('x') === true && b9.classList.contains('x') === true)
@@ -169,12 +181,14 @@ function checkGame()
             xscore++;
             xwl.innerHTML = 'You Win'
             freeze = 'true'
+            document.getElementById('lbot').innerHTML = xscore;
         }
         else{
             oscore++;
             owl.innerHTML = 'You Win'
             freeze = 'true'
-        }
+            document.getElementById('rbot').innerHTML = oscore;
+        }   
     }
     else if ((b3.classList.contains('x') === true && b5.classList.contains('x') === true && b7.classList.contains('x') === true)
     || (b3.classList.contains('o') === true && b5.classList.contains('o') === true && b7.classList.contains('o') === true)
@@ -185,11 +199,13 @@ function checkGame()
             xscore++;
             xwl.innerHTML = 'You Win'
             freeze = 'true'
+            document.getElementById('lbot').innerHTML = xscore;
         }
         else{
             oscore++;
             owl.innerHTML = 'You Win'
             freeze = 'true'
+            document.getElementById('rbot').innerHTML = oscore;
         }
     }
     else if(counter > 8)
