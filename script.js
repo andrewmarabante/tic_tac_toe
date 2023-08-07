@@ -23,18 +23,12 @@ function changeBlock()
     {
         if (currentPlayer === '1')
         {
-            const xpic = document.createElement('img');
             this.classList.add('x');
-            this.appendChild(xpic);
-            xpic.src = 'images/Ximg.png';
             changePlayer();
             checkGame();
             }
             else{
-            const opic = document.createElement('img');
             this.classList.add('o')
-            this.appendChild(opic);
-            opic.src = 'images/Oimg.jpeg';
             changePlayer();
             checkGame();
         }
