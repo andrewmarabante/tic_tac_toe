@@ -7,7 +7,6 @@
 }
 .bot{
     height: 4em;
-    background-color: aqua;
     display: flex;
 }
 .container{
@@ -37,6 +36,7 @@
     align-items: center;
     max-height: 10em;
     max-width: 10em;
+    user-select: none;
 }
 
 .x{
@@ -49,9 +49,12 @@
 }
 
 #reset{
+    border: none;
     padding: 1em;
-    padding-left: 3em;
-    padding-right: 3em;
+    padding-left: 8em;
+    padding-right: 8em;
+    border-radius: .5em;
+    font-size: 1em;
 }
 .butdiv{
     min-width: 20em;
@@ -61,11 +64,17 @@
 }
 #xwl{
     flex: 1;
-    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
 }
 #owl{
     flex: 1;
-    background-color: bisque;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
 }
 .ltop{
     height: 8em;
