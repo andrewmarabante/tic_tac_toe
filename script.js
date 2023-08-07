@@ -1,5 +1,8 @@
 let currentPlayer = '1';
 let counter = 0;
+let freeze = 'false';
+let xscore = 0;
+let oscore = 0;
 document.getElementById('reset').addEventListener('click', reset)
 const currentBoard = [];
 
@@ -20,7 +23,7 @@ const currentBoard = [];
 
 function changeBlock()
 {
-    if (!this.classList.contains('x') && !this.classList.contains('o'))
+    if (!this.classList.contains('x') && !this.classList.contains('o') && (freeze === 'false'))
     {
         if (currentPlayer === '1')
         {
@@ -48,6 +51,8 @@ function changePlayer()
 
 function checkGame()
 {
+    const xwl = document.getElementById('xwl');
+    const owl = document.getElementById('owl');
     const b1 = currentBoard[0];
     const b2 = currentBoard[1];
     const b3 = currentBoard[2];
@@ -63,53 +68,134 @@ function checkGame()
         || (b1.classList.contains('o') === true && b2.classList.contains('o') === true && b3.classList.contains('o') === true)
     )
     {
-        console.log('game');
+        if ((b1.classList.contains('x') === true))
+        {
+            xscore++;
+            xwl.innerHTML = 'You Win'
+            freeze = 'true'
+        }
+        else{
+            oscore++;
+            owl.innerHTML = 'You Win'
+            freeze = 'true'
+        }
     }
     else if ((b4.classList.contains('x') === true && b5.classList.contains('x') === true && b6.classList.contains('x') === true)
     || (b4.classList.contains('o') === true && b5.classList.contains('o') === true && b6.classList.contains('o') === true)
     )
     {
-        console.log('game');
+        if ((b4.classList.contains('x') === true))
+        {
+            xscore++;
+            xwl.innerHTML = 'You Win'
+            freeze = 'true'
+        }
+        else{
+            oscore++;
+            owl.innerHTML = 'You Win'
+            freeze = 'true'
+        }
     }
     else if ((b7.classList.contains('x') === true && b8.classList.contains('x') === true && b9.classList.contains('x') === true)
     || (b7.classList.contains('o') === true && b8.classList.contains('o') === true && b9.classList.contains('o') === true)
     )
     {
-        console.log('game');
+        if ((b7.classList.contains('x') === true))
+        {
+            xscore++;
+            xwl.innerHTML = 'You Win'
+            freeze = 'true'
+        }
+        else{
+            oscore++;
+            owl.innerHTML = 'You Win'
+            freeze = 'true'
+        }
     }
     else if ((b1.classList.contains('x') === true && b4.classList.contains('x') === true && b7.classList.contains('x') === true)
     || (b1.classList.contains('o') === true && b4.classList.contains('o') === true && b7.classList.contains('o') === true)
     )
     {
-        console.log('game');
+        if ((b1.classList.contains('x') === true))
+        {
+            xscore++;
+            xwl.innerHTML = 'You Win'
+            freeze = 'true'
+        }
+        else{
+            oscore++;
+            owl.innerHTML = 'You Win'
+            freeze = 'true'
+        }
     }
     else if ((b2.classList.contains('x') === true && b5.classList.contains('x') === true && b8.classList.contains('x') === true)
     || (b2.classList.contains('o') === true && b5.classList.contains('o') === true && b8.classList.contains('o') === true)
     )
     {
-        console.log('game');
+        if ((b2.classList.contains('x') === true))
+        {
+            xscore++;
+            xwl.innerHTML = 'You Win'
+            freeze = 'true'
+        }
+        else{
+            oscore++;
+            owl.innerHTML = 'You Win'
+            freeze = 'true'
+        }
     }
     else if ((b3.classList.contains('x') === true && b6.classList.contains('x') === true && b9.classList.contains('x') === true)
     || (b3.classList.contains('o') === true && b6.classList.contains('o') === true && b9.classList.contains('o') === true)
     )
     {
-        console.log('game');
+        if ((b3.classList.contains('x') === true))
+        {
+            xscore++;
+            xwl.innerHTML = 'You Win'
+            freeze = 'true'
+        }
+        else{
+            oscore++;
+            owl.innerHTML = 'You Win'
+            freeze = 'true'
+        }
     }
     else if ((b1.classList.contains('x') === true && b5.classList.contains('x') === true && b9.classList.contains('x') === true)
     || (b1.classList.contains('o') === true && b5.classList.contains('o') === true && b9.classList.contains('o') === true)
     )
     {
-        console.log('game');
+        if ((b1.classList.contains('x') === true))
+        {
+            xscore++;
+            xwl.innerHTML = 'You Win'
+            freeze = 'true'
+        }
+        else{
+            oscore++;
+            owl.innerHTML = 'You Win'
+            freeze = 'true'
+        }
     }
     else if ((b3.classList.contains('x') === true && b5.classList.contains('x') === true && b7.classList.contains('x') === true)
     || (b3.classList.contains('o') === true && b5.classList.contains('o') === true && b7.classList.contains('o') === true)
     )
     {
-        console.log('game');
+        if ((b3.classList.contains('x') === true))
+        {
+            xscore++;
+            xwl.innerHTML = 'You Win'
+            freeze = 'true'
+        }
+        else{
+            oscore++;
+            owl.innerHTML = 'You Win'
+            freeze = 'true'
+        }
     }
     else if(counter > 8)
     {
-        console.log('tie')
+        xwl.innerHTML = 'Tie'
+        owl.innerHTML = 'Tie'
     }
 }
 
@@ -127,4 +213,8 @@ function reset()
         }
     }
     counter = 0;
+    currentPlayer = '1';
+    freeze = 'false';
+    document.getElementById('xwl').innerHTML = '';
+    document.getElementById('owl').innerHTML = '';
 }
